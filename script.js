@@ -1,4 +1,4 @@
-const initialLikes = 100;
+const initialLikes = 10;
 const initialDislikes = 20;
 
 let likesCount = initialLikes;
