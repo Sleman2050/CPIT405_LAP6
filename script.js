@@ -41,10 +41,19 @@ submitBtn.addEventListener("click", () => {
 // Handle clear button
 clearBtn.addEventListener("click", () => {
     commentBox.value = "";
+    
+   
+   likesBtn.innerText = "👍" + initialLikes;
+dislikesBtn.innerText = "👎" + initialDislikes;
+document.getElementById("commentsList").innerHTML = "";
+    
+    
     // Assuming you want to reset the cookie here
-    const expiresOn = new Date(Date.now() + 1 * 60 * 1000);
+    const expiresOn = new Date(Date.now() - 1 * 60 * 1000);
     const cookieString = "voted=true; path=/; expires=" + expiresOn.toUTCString();
     document.cookie = cookieString;
+    commentsList.clear();
+   
 });
 
 // Function to set cookie
